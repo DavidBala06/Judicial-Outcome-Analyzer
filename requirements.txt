@@ -1,0 +1,15 @@
+# Core Data Manipulation
+pandas==2.2.0
+numpy==1.26.4
+
+# Data Visualization (EDA)
+matplotlib==3.8.2
+seaborn==0.13.2
+
+# Machine Learning
+scikit-learn==1.4.0
+
+shap==0.44.1
+
+# Environment
+notebook==7.0.7
