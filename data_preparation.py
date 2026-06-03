@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 df = pd.read_csv('predictive_criminal_justice_dataset.csv')
-df_clean = df.drop("Case_ID", axis=1) #Case Id is not useful for prediction, so we drop it.
+df_clean = df.drop(["Case_ID", "Crime_Location"], axis=1) #Case Id is not useful for prediction, so we drop it.
 
 X = df_clean.drop("Case_Outcome", axis = 1)
 y = df_clean["Case_Outcome"]
