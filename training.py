@@ -5,6 +5,7 @@ import seaborn as sns
 import numpy as np 
 import data_preparation as dp
 import pandas as pd 
+import joblib 
 
 rf_model = RandomForestClassifier(n_estimators = 100, random_state = 42, class_weight="balanced")
 rf_model.fit(dp.X_train, dp.y_train)
@@ -36,3 +37,9 @@ plt.title('Top 10 Most Important Factors Influencing the Verdict', fontsize=14, 
 plt.xlabel('Importance Score', fontsize=12)
 plt.ylabel('Feature', fontsize=12)
 plt.show()
+
+joblib.dump(rf_model, 'lexpredict_model.pkl')
+joblib.dump(dp.X_encoded.columns.tolist(), 'model_columns.pkl')
+joblib.dump(dp.label_encoder, 'label_encoder.pkl')
+
+print("Antrenarea s-a terminat! Fișierele .pkl au fost salvate.")
