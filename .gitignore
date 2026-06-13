@@ -1,2 +1,6 @@
 .venv/
-/pkl
+
+/__pycache__/
+pkl
+*.pkl
+*.log
